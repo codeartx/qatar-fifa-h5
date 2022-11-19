@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA World Cup Qatar 2022</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel='stylesheet' href='./css/animate.css'>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Asap:700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<audio id="bgMusicPlayer" controls autoplay style="position: absolute;left: 0;bottom: 0">
+    <source src="./assets/卡塔尔世界杯主题曲%20开场.MP3" type="audio/mp3">
+</audio>
+
+<div class="background">
+
+    <h1 class="tlt tlt-top" data-in-effect="flipInY">FIFA World Cup Qatar</h1>
+    <h1 class="tlt" data-in-effect="flipInY">2022</h1>
+
+    <div class="star star-1" id="firststar"></div>
+
+    <!-- player -->
+    <div id="player" class="player">
+        <img src="assets/player.png" alt="football player png">
+    </div>
+
+    <div class="fof-wrapper">
+        <div class="animated-bounce mybounce">
+            <div class="fof-wrapper-inner bounceInLeft">
+                <img src="http://redonion.se/img/codepen/fof/fof-ball3.png" width="372" height="372" class="fof-ball"/>
+                <div id="fireplace"></div>
+            </div><!--fof-wrapper-inner-->
+        </div><!--animated bounce-->
+
+    </div><!--fof-wrapper-->
+
+    <img id="baby" src="assets/baby.png" class="baby">
+</div><!--background-->
+</body>
+
+<script src="./lib/wow.min.js"></script>
+<!-- partial -->
+<script src='./lib/jquery.min.js'></script>
+<script src='./lib/jquery.lettering.min.js'></script>
+<script src='./lib/TweenMax.min.js'></script>
+
+<script>
+  new WOW().init();
+
+  document.getElementById('bgMusicPlayer').play()
+
+  setTimeout(() => {
+    document.getElementById('player').className = 'player animated fadeInRightBig'
+
+    setTimeout(() => {
+      document.getElementById('baby').className = 'baby animated bounceIn'
+    }, 3000)
+  }, 3000)
+</script>
+<script src="./script.js"></script>
+
+</body>
+</html>
